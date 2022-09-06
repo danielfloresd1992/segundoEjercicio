@@ -1,0 +1,123 @@
+@font-face {
+    font-family: "Satisfy";
+    src: url("/src/assets/font/Satisfy/Satisfy-Regular.ttf");
+}
+
+.load-page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: beige;
+    z-index: 100;
+    overflow: hidden;
+}
+.hidden{
+    display: none;
+}
+.load--sol{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    background-color: #ffc60f;
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    animation: sol 4s linear infinite;
+}
+.load--piso {
+    width: 140%;
+    height: 300px;
+    bottom: -100px;
+    background-image: linear-gradient(45deg, #c1ac00, #cd490e);
+    position: absolute;
+    border-radius: 50%;
+}
+
+.load--lago {
+    width: 100%;
+    height: 200px;
+    bottom: -40px;
+    position: absolute;
+    background-image: linear-gradient(0deg, #0d9bff, #01f1e600);
+}
+.left{
+    right: 0;
+}
+
+.load--svg {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: flex-end;
+}
+
+.load--img {
+    width: 150px;
+    bottom: 148px;
+    left: 10px;
+    position: absolute;
+    filter: brightness(0.8);
+}
+
+.load--img_nube {
+    position: absolute;
+}
+
+.firt {
+    width: 20vh;
+    top: 130px;
+    filter: invert(.9);
+    animation: wobble 40s linear infinite;
+}
+
+
+@keyframes wobble {
+    0% {
+        transform: translateX(-50px);
+    }
+    100% {
+        transform: translateX(500px);
+    } 
+}
+@keyframes sol {
+    0% {
+        box-shadow: 0px 0px 30px 15px #fdbf11;
+    }
+    50% {
+        box-shadow: 0px 0px 20px 5px #fdbf11;
+    } 
+    100% {
+        box-shadow: 0px 0px 30px 15px #fdbf11;
+    }
+}
+
+.load--title{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    backdrop-filter: blur(2px);
+    align-items: center;
+    justify-content: center;
+}
+.title{
+    font-family: "Satisfy";
+    color: #1e3860;
+}
+
+
+@media screen and (min-width: 720px){
+    .load-page{
+        background-image: linear-gradient(rgb(255, 136, 0), rgb(143, 143, 143))
+    }
+
+    .title{
+        font-size: 5rem;
+       
+    }
+}
